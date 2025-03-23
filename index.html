@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Price Comparison</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <header>
@@ -13,7 +12,7 @@
             <div class="menu-container">
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" id="menu-button">☰ Menu</label>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id="dropdown-content">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="browse.html">Browse Products</a>
@@ -31,6 +30,13 @@
             </div>
         </div>
     </header>
+    
+    <main>
+        <div id="product-grid" class="product-grid">
+            <!-- Product results will be displayed here -->
+        </div>
+    </main>
+    
     <script src="main.js"></script>
     <script src="test.js"></script>
 </body>
