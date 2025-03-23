@@ -1,0 +1,155 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0ff; /* Light lilac background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #8a4fff; /* Vibrant purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a1b9a; /* Darker purple */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #4a148c; /* Even darker purple */
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-container {
+    position: relative;
+}
+
+#menu-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a1b9a; /* Darker purple */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#menu-button:hover {
+    background-color: #4a148c; /* Even darker purple */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f0ff; /* Light lilac */
+}
+
+main {
+    margin-top: 20px;
+}
+
+#results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #6a1b9a; /* Darker purple */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #6a1b9a; /* Darker purple */
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #8a4fff; /* Vibrant purple */
+    color: white;
+}
