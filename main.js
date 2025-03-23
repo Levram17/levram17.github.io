@@ -1,34 +1,34 @@
-// Toggle dropdown menu
-document.getElementById('menu-button').addEventListener('click', function() {
-    const dropdown = document.getElementById('dropdown-content');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-});
+// Toggle menu
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('menu-button').addEventListener('click', function(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('dropdown-content');
+        if (dropdown) {
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    });
 
-// Close dropdown when clicking outside
-window.addEventListener('click', function(event) {
-    const dropdown = document.getElementById('dropdown-content');
-    const menuButton = document.getElementById('menu-button');
-    if (event.target !== menuButton && !menuButton.contains(event.target)) {
-        dropdown.style.display = 'none';
-    }
-});
+    // Close menu when clicking outside
+    window.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('dropdown-content');
+        const menuButton = document.getElementById('menu-button');
+        if (dropdown && event.target !== menuButton && !menuButton.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
 
-// Show alert for placeholder links
-function showAlert(page) {
-    alert(`You clicked on the ${page} page. This is a placeholder.`);
-}
-
-// Search functionality
-document.getElementById('search-button').addEventListener('click', function() {
-    const query = document.getElementById('search-input').value;
-    if (query) {
-        searchProducts(query);
-    }
+    // Search products
+    document.getElementById('search-button').addEventListener('click', function() {
+        const query = document.getElementById('search-input').value;
+        if (query) {
+            searchProducts(query);
+        }
+    });
 });
 
 function displayResults(products) {
     const productGrid = document.getElementById('product-grid');
-    productGrid.innerHTML = ''; // Clear previous results
+    productGrid.innerHTML = '';
 
     products.forEach(product => {
         const productCard = document.createElement('div');
