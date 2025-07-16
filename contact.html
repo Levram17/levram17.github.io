@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Marvel Zhang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Marvel Zhang</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <h2>Let's Connect and Collaborate</h2>
+            <p>I'm always interested in discussing <strong>job opportunities</strong>, <strong>collaborative projects</strong>, or just connecting with fellow tech enthusiasts. Feel free to reach out through any of the channels below!</p>
+        </section>
+
+        <section class="contact-methods">
+            <h2>Contact Information</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:marvelzhang35@gmail.com">marvelzhang35@gmail.com</a></p>
+                    <p class="contact-note">Best for professional inquiries and project discussions</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:815-499-4570">815-499-4570</a></p>
+                    <p class="contact-note">Available for calls Monday-Friday, 9 AM - 6 PM CST</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🔗</div>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/marvel-zhang-228a7a227" target="_blank">LinkedIn Profile</a></p>
+                    <p class="contact-note">Professional networking and career opportunities</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Madison, Wisconsin</p>
+                    <p class="contact-note">Available for local meetups and networking events</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Send Me a Message</h2>
+            <div class="form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Please select a subject</option>
+                            <option value="job-opportunity">Job Opportunity</option>
+                            <option value="collaboration">Project Collaboration</option>
+                            <option value="networking">Networking</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Organization (Optional)</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, opportunity, or how I can help you..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            I'd like to receive updates about Marvel's projects and achievements
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <h2>Find Me Online</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/marvel-zhang-228a7a227" target="_blank" class="social-link linkedin">
+                    <span class="social-icon">💼</span>
+                    <span class="social-text">LinkedIn</span>
+                    <span class="social-description">Professional updates and networking</span>
+                </a>
+                
+                <a href="https://github.com/Levram17" target="_blank" class="social-link github">
+                    <span class="social-icon">💻</span>
+                    <span class="social-text">GitHub</span>
+                    <span class="social-description">Code repositories and projects</span>
+                </a>
+                
+                <a href="mailto:marvelzhang35@gmail.com" class="social-link email">
+                    <span class="social-icon">📬</span>
+                    <span class="social-text">Email</span>
+                    <span class="social-description">Direct professional contact</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Contact form
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate submission
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3');
+            const answer = item.querySelector('p');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close FAQ
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle item
+                item.classList.toggle('active', !isActive);
+            });
+        });
+
+        // Reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Form field effects
+        const formInputs = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
