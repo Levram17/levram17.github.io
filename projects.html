@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Marvel Zhang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Marvel Zhang</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <h1>My Projects</h1>
+            <h2>Showcasing Technical Skills and Innovation</h2>
+            <p>Here's a collection of projects that demonstrate my expertise in <strong>data analysis</strong>, <strong>web development</strong>, and <strong>software engineering</strong>. Each project represents a unique challenge and learning opportunity.</p>
+        </section>
+
+        <section class="project-categories">
+            <h2>Project Categories</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="current">Current Projects</button>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="project-card" data-category="data-analysis">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3>Multi-Source Loan Data Analysis</h3>
+                    <p class="project-date"><em>December 2024</em></p>
+                    <p>Developed an end-to-end data analysis pipeline integrating geographic data, financial records, and real-time loan applications using <strong>Google Cloud Platform</strong>.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Geospatial analysis using BigQuery ML</li>
+                        <li>Linear regression model for income-loan relationships</li>
+                        <li>Automated ETL processes for data transformation</li>
+                        <li>Integration of multiple data sources (Parquet files, Google Sheets, public datasets)</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">BigQuery ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-development">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3>PriceCompare Web Application</h3>
+                    <p class="project-date"><em>April 2025</em></p>
+                    <p>Built a responsive web application that allows users to compare product prices across multiple e-commerce platforms including <strong>Amazon</strong> and <strong>eBay</strong>.</p>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <ul>
+                        <li>Python web scraper using BeautifulSoup for real-time data extraction</li>
+                        <li>Responsive front-end with HTML, CSS, and JavaScript</li>
+                        <li>Flask API backend for seamless data communication</li>
+                        <li>User-friendly interface with search and browsing functionality</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="current web-development">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3>Professional Portfolio Website</h3>
+                    <p class="project-date"><em>Current Project - July 2025</em></p>
+                    <p>Creating a modern, responsive portfolio website to showcase my projects and skills. This project demonstrates my front-end development capabilities and attention to user experience design. This portfolio will continously get updated as I learn more.</p>
+                    
+                    <h4>Current Features:</h4>
+                    <ul>
+                        <li>Responsive design with mobile-first approach</li>
+                        <li>Interactive JavaScript elements and smooth animations</li>
+                        <li>Accessible design following WCAG guidelines</li>
+                        <li>SEO optimized structure and content</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">GitHub Pages</span>
+                    </div>
+                    
+                    <div class="project-status">
+                        <span class="status-badge current">In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-skills">
+            <h2>Technical Skills Demonstrated</h2>
+            <div class="skills-showcase">
+                <div class="skill-category">
+                    <h3>Data Analysis & Machine Learning</h3>
+                    <p>Python, SQL, Pandas, NumPy, Scikit-learn, Google Cloud Platform, BigQuery ML</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Flask, Node.js, Responsive Design</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <p>Git, GitHub, VS Code, Jupyter Notebooks, Docker, RESTful APIs</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Project filtering functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <style>
+        .projects-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .project-categories {
+            margin-bottom: 3rem;
+        }
+
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #4A90E2;
+            background-color: transparent;
+            color: #4A90E2;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content h4 {
+            color: #4A90E2;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .project-content ul {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-content li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background-color: #e8f4fd;
+            color: #4A90E2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 1px solid #4A90E2;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        .project-status {
+            margin-top: 1rem;
+        }
+
+        .status-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-badge.current {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .status-badge.planning {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .status-badge.learning {
+            background-color: #9b59b6;
+            color: white;
+        }
+
+        .project-skills {
+            margin-bottom: 3rem;
+        }
+
+        .skills-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: #4A90E2;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-filters {
+                justify-content: center;
+            }
+            
+            .filter-btn {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</body>
+</html>
