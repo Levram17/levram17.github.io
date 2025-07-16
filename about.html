@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Marvel Zhang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Marvel Zhang</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-content">
+                <h1>About Me</h1>
+                <h2>Getting to Know Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Hello! I'm Marvel Zhang, a senior at the University of Wisconsin-Madison studying <strong>Information Science</strong> with a certificate in <strong>Data Science</strong>. I'm passionate about leveraging technology to solve real-world problems and create meaningful impact through data-driven insights.</p>
+                        
+                        <p>My academic journey has been focused on understanding how information systems can be designed to better serve human needs. Through my coursework in <em>Big Data Systems</em>, <em>Artificial Intelligence</em>, and <em>Human-Computer Interaction</em>, I've developed a comprehensive understanding of both the technical and human aspects of information technology.</p>
+
+                        <h3>My Background</h3>
+                        <p>Originally from Sterling, Illinois, I'd been lost on what to do or what dreams to pursue, but recently I've been fascinated by the intersection of technology and human behavior. This interest led me to pursue Information Science, where I could explore how we can design better systems for storing, processing, and presenting information.</p>
+
+                        <h3>What Drives Me</h3>
+                        <p>I believe that <strong>data tells stories</strong>, and my goal is to become proficient at uncovering these stories to drive better decision-making. Whether it's analyzing market trends for product development or creating user-friendly interfaces for complex systems, I'm committed to making technology more accessible and useful for everyone.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="89B94689-9EE0-4134-80C1-B1196012FDBFIMG_9669-2.JPG" alt="Marvel Zhang - Information Science student at UW-Madison">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-interests">
+            <h2>Personal Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Tennis</h3>
+                    <p>Having worked as a tennis instructor and played throughout high school, I continue to enjoy playing tennis in my free time, even now!.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Web Development</h3>
+                    <p>This is something I picked up recently and fell in love with right away! Building responsive, user-friendly websites and applications is both challenging and rewarding.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-details">
+            <h2>Educational Journey</h2>
+            <div class="education-content">
+                <h3>Current Studies</h3>
+                <p>At the University of Wisconsin-Madison, I'm pursuing a Bachelor of Science in Information Science with a certificate in Data Science. My expected graduation is August 2025.</p>
+                
+                <h3>Relevant Coursework</h3>
+                <ul>
+                    <li><strong>Big Data Systems</strong> - Learning to work with large-scale data processing systems</li>
+                    <li><strong>Artificial Intelligence</strong> - Understanding machine learning algorithms and their applications</li>
+                    <li><strong>Human-Computer Interaction</strong> - Designing user-centered technology solutions</li>
+                    <li><strong>Applied Database</strong> - Database design and management principles</li>
+                    <li><strong>Information Architecture</strong> - Organizing and structuring information effectively</li>
+                    <li><strong>Data Storytelling</strong> - Communicating insights through data visualization</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
