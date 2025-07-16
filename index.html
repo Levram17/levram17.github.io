@@ -1,29 +1,121 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<meta charset="UTF-8">
-
-<title>Page Title</title>
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link rel="stylesheet" href="">
-
-<style>
-
-</style>
-
-<script src=""></script>
-
-<!--- Code above this line will not be displayed on the browser -->
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Zhang - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Marvel Zhang</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<p> Hello world!<br>
-    My name is Marvel
-</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <h2>Information Science Student & Minor in Data Science</h2>
+                <p>I'm Marvel Zhang, a senior at the University of Wisconsin-Madison studying Information Science with a certificate in Data Science. I'm passionate about <strong>data analysis</strong>, <strong>web development</strong>, and creating meaningful solutions through technology.</p>
+                
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="IMG_1561.JPG" alt="Marvel Zhang - Information Science Student">
+            </div>
+        </section>
 
+        <section class="highlights">
+            <h2>Quick Highlights</h2>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <h3>Education</h3>
+                    <p>Bachelor of Science in Information Science with Data Science Certificate from UW-Madison</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Experience</h3>
+                    <p>Data Analytics Intern at Wahl Clipper Corporation with 93% accurate monitoring system</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Skills</h3>
+                    <p>Python, Java, R, SQL, JavaScript, and various data analysis tools</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-projects">
+            <h2>Recent Projects</h2>
+            <div class="project-preview">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Multi-Source Loan Data Analysis</h3>
+                        <p>End-to-end data analysis pipeline using Python, SQL, and Google Cloud Platform</p>
+                        <a href="projects.html" class="project-link">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>PriceCompare Web App</h3>
+                        <p>Responsive web application for comparing product prices across e-commerce platforms</p>
+                        <a href="projects.html" class="project-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
 </body>
-
 </html>
